@@ -187,6 +187,8 @@ hr {
 </head>
 
 <body>
+<p>##Reproducible Research Peer Review 1</p>
+
 <p>Analysis documentation/code for Reproducible Research Peer Review 1 assignment.  This code aims to answer questions about &ldquo;quantified self&rdquo; type activity data from a personal activity monitoring device.  The data is in the format of a .csv file and contains the variables date, # of steps, and interval identifier. The data was taken in five minute intervals from Oct. and Nov. 2012 and missing values are coded as &ldquo;NA&rdquo;.  </p>
 
 <p>###Loading/pre-processing data.  </p>
@@ -194,12 +196,7 @@ hr {
 <p>We start by downloading the data file to our working directory, unzip it, then read it in. We also go ahead and transform the date column to a &ldquo;date&rdquo; object from a factor.    </p>
 
 <pre><code class="r">library(RCurl)
-</code></pre>
-
-<pre><code>## Loading required package: bitops
-</code></pre>
-
-<pre><code class="r">download.file(&#39;http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&#39;,&#39;activity.zip&#39;) 
+download.file(&#39;http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&#39;,&#39;activity.zip&#39;) 
 unzip(&#39;activity.zip&#39;)
 data &lt;- read.csv(&#39;activity.csv&#39;)
 data$date &lt;- as.Date(data$date)

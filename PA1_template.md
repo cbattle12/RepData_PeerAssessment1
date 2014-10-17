@@ -1,7 +1,5 @@
----
-title: "Reproducible Research Peer Review 1"
-output: html_document
----
+##Reproducible Research Peer Review 1
+
 
 Analysis documentation/code for Reproducible Research Peer Review 1 assignment.  This code aims to answer questions about "quantified self" type activity data from a personal activity monitoring device.  The data is in the format of a .csv file and contains the variables date, # of steps, and interval identifier. The data was taken in five minute intervals from Oct. and Nov. 2012 and missing values are coded as "NA".  
 
@@ -12,13 +10,6 @@ We start by downloading the data file to our working directory, unzip it, then r
 
 ```r
 library(RCurl)
-```
-
-```
-## Loading required package: bitops
-```
-
-```r
 download.file('http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip','activity.zip') 
 unzip('activity.zip')
 data <- read.csv('activity.csv')
